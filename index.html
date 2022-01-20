@@ -681,16 +681,23 @@
             ease: "expo.inOut",
         });
 
-        function timedText() {
-            var x = document.getElementById('txt');
-            setInterval(function () {
-                x.innerHTML = ("Development");
-            }, 10000);
-            setInterval(function () {
-                x.innerHTML = ("Design");
-            }, 10000);
+        var example = ['DESIGN', 'DEVELOPMENT', 'DEPLOYMENT', 'BUGS'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function () {
+                    document.getElementById("txt").innerHTML = example[i];
+                    textSequence(++i);
+                }, 5000); // 1 second (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
         }
-        window.onload(timedText())
+
 
 
 
