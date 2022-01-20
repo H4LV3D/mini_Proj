@@ -48,7 +48,7 @@
             font-size: 20px;
         }
 
-        .navbar>div>img {
+        .navbar>div>a>img {
             position: relative;
             right: 0px;
             width: 80px;
@@ -59,10 +59,13 @@
         }
 
         .navbar .lang {
-            font-size: 20px;
-            font-weight: 500;
+            font-size: 30px;
+            font-weight: 800;
+            text-decoration: underline;
+            text-decoration-color: white;
             text-transform: uppercase;
             position: relative;
+            opacity: 0.8;
             right: -900px;
         }
 
@@ -73,6 +76,7 @@
             bottom: 250px;
             left: -140px;
             transform: rotate(-90deg);
+            z-index: 9;
         }
 
         .media ul li {
@@ -83,8 +87,14 @@
             display: inline-block;
             padding: 0 25px;
             text-transform: uppercase;
-            opacity: 0.4;
+            opacity: 0.8;
             cursor: pointer;
+            z-index: 20;
+        }
+
+        .media ul li a {
+            text-decoration: none;
+            color: white;
         }
 
         /* TEXT 
@@ -149,8 +159,9 @@
             font-weight: 300;
             position: relative;
             font-family: 'Merriweather', serif;
+            line-height: 25px;
             /* overflow: hidden; */
-            height: 100px;
+            height: 170px;
         }
 
         .text p .hide--text {
@@ -160,7 +171,7 @@
         .totheleft {
             position: relative;
             right: -700px;
-            top: -200px;
+            top: -220px;
         }
 
         /* BUTTONS
@@ -173,8 +184,8 @@
             font-weight: 500;
         }
 
-        .btncta>button {
-            padding: 12px 50px;
+        .btncta>a:nth-child(1) {
+            padding: 15px 60px;
             background-color: #012A36;
             border-radius: 10px;
             font-family: 'Merriweather', serif;
@@ -183,8 +194,38 @@
             margin-top: 20px;
             color: white;
             font-weight: 400;
+            text-decoration: none;
             cursor: pointer;
         }
+
+        .btncta>a:nth-child(2) {
+            padding: 15px 60px;
+            background-color: transparent;
+            border-radius: 10px;
+            font-family: 'Merriweather', serif;
+            border: 2px solid #012A36;
+            margin-left: 20px;
+            margin-top: 20px;
+            color: white;
+            font-weight: 400;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btncta>a:nth-child(3) {
+            padding: 15px 60px;
+            background-color: transparent;
+            border-radius: 10px;
+            font-family: 'Merriweather', serif;
+            border: 2px solid #012A36;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: white;
+            font-weight: 400;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
 
 
         .btncta>button>a {
@@ -199,12 +240,13 @@
 =============================== */
         .sponsor {
             position: absolute;
-            bottom: -80px;
-            left: -180px;
+            bottom: -60px;
+            left: -120px;
             display: grid;
             height: 100%;
             width: 100%;
             place-items: center;
+            z-index: 8;
         }
 
 
@@ -308,11 +350,16 @@
 =============================== */
         .distortion {
             display: flex;
-            width: 580px;
-            height: 720px;
+            width: 300px;
+            height: 400px;
             position: absolute;
-            right: 300px;
+            right: 600px;
             bottom: 0;
+        }
+
+        .distortion img {
+            position: relative;
+            top: -150px;
         }
 
         /* OVERLAY 
@@ -350,7 +397,7 @@
             position: relative;
             width: var(--sizeX);
             height: var(--sizeY);
-            margin-top: 100px;
+            margin-top: 70px;
             margin-left: var(sizeX / 2);
             border: calc(var(--sizeX) / 10) solid var(--color);
             border-radius: 50px;
@@ -451,9 +498,9 @@
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
             <div>
-                <img src="logo.png" alt="">
+                <a href="index.html"><img src="logo.png" alt=""></a>
             </div>
-            <div class="lang toggle">00</div>
+            <div class="lang">00</div>
             <div class="search">
                 <ion-icon name="search-outline"></ion-icon>
             </div>
@@ -461,9 +508,10 @@
 
         <div class="media">
             <ul>
-                <li>WORKS</li>
-                <li>GALLERY</li>
-                <li>BLOG</li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="works.html">SKILLS</a></li>
+                <li><a href="works.html">GALLERY</a></li>
+                <!-- <li><a href="works.html">BLOG</a></li> -->
             </ul>
         </div>
 
@@ -473,19 +521,21 @@
             <div class="totheleft">
 
                 <h3>
-                    <span class="hide--text">collection 2017 <br />duality</span>
+                    <span class="hide--text">Hi, I do<br />Web <span style="color: white;" id="txt">
+                            Design</span></span>
                 </h3>
                 <p>
                     <span class="hide--text">
                         Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum has been the industry's standard dummy text
                         ever since the 1500s, when an unknown printer took a galley of type
-                        and scrambled it to make a type specimen book.
+                        and scrambled it to make a type specimen book.Lorem Ipsum has been the industry's standard dummy
+                        text ever since.
                     </span>
                 </p>
                 <div class="btncta">
-                    <button><a href="home.html">ABOUT ME</a></button>
-                    <button><a href="index.html">CONTACT</a></button>
+                    <a href="about.html">ABOUT ME</a>
+                    <a href="contact.html">CONTACT</a>
                 </div>
                 <div class='scrolldown'>
                     <div class="chevrons">
@@ -520,7 +570,7 @@
             </div>
         </div>
         <div class="distortion">
-            <img src="https://www.dropbox.com/s/827kuldqiqfpqlg/02.png?raw=1" alt="">
+            <img src="bit.png" alt="Bitmoji">
         </div>
     </div>
 
@@ -630,6 +680,20 @@
             top: "-100%",
             ease: "expo.inOut",
         });
+
+        function timedText() {
+            var x = document.getElementById('txt');
+            setInterval(function () {
+                x.innerHTML = ("Development");
+            }, 10000);
+            setInterval(function () {
+                x.innerHTML = ("Design");
+            }, 10000);
+        }
+        window.onload(timedText())
+
+
+
     </script>
 
 </body>
