@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js">
@@ -55,6 +56,11 @@
             width: 80px;
         }
 
+        .navbar>div>a>img:hover {
+            transition: 500ms;
+            width: 100px;
+        }
+
         .navbar .menu {
             margin-right: auto;
         }
@@ -68,6 +74,13 @@
             position: relative;
             opacity: 0.8;
             right: -900px;
+            cursor: pointer;
+        }
+
+        .navbar .lang:hover{
+            transition: 500ms;
+            color: #012A36;
+            font-size: 34px;
         }
 
         /* SOCIAL MEDIA 
@@ -81,6 +94,8 @@
         }
 
         .media ul li {
+            font-family: 'Merriweather';
+            font-weight: 400;
             color: white;
             font-size: 14px;
             font-weight: 300;
@@ -93,11 +108,15 @@
             z-index: 20;
         }
 
+        
         .media ul li a {
             text-decoration: none;
             color: white;
         }
-
+        
+        .media ul li a:hover {
+            color: #012A36;
+        }
         /* TEXT 
 =============================== */
         .text {
@@ -129,24 +148,28 @@
         .text h2 {
             content: "duality";
             position: absolute;
-            top: 40px;
-            left: -80px;
+            top: 8px;
+            left: -140px;
             color: #ffffff;
             z-index: -1;
-            font-size: 200px;
+            font-size: 206px;
+            text-transform: uppercase;
+            font-weight: 900;
             opacity: 0.2;
             transform: rotate(-90deg);
         }
 
         .text h3 {
             font-size: 50px;
+            font-family: 'Merriweather';
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 400;
             line-height: 1;
             position: relative;
             top: -40px !important;
             /* overflow: hidden; */
             height: 70px;
+            line-height: 60px;
         }
 
         .text h3 .hide--text {
@@ -199,6 +222,12 @@
             cursor: pointer;
         }
 
+        .btncta>a:nth-child(1):hover{
+            transition: 1000ms;
+            background-color: transparent;
+            border: 2px solid #012A36;
+        }
+
         .btncta>a:nth-child(2) {
             padding: 15px 60px;
             background-color: transparent;
@@ -211,6 +240,11 @@
             font-weight: 400;
             text-decoration: none;
             cursor: pointer;
+        }
+        .btncta>a:nth-child(2):hover{
+            transition: 1000ms;
+            background-color: #012A36;
+            
         }
 
         .btncta>a:nth-child(3) {
@@ -535,7 +569,7 @@
                     </span>
                 </p>
                 <div class="btncta">
-                    <a href="about.html">ABOUT ME</a>
+                    <a href="abouts.html">MEET ME</a>
                     <a href="contact.html">CONTACT</a>
                 </div>
                 <div class='scrolldown'>
@@ -682,7 +716,7 @@
             ease: "expo.inOut",
         });
 
-        var example = ['DESIGN', 'DEVELOPMENT', 'DEPLOYMENT', 'BUGS'];
+        var example = ['DESIGN', 'DEVELOPMENT', 'DEPLOYMENT', 'BUG BOUNTY'];
 
         textSequence(0);
         function textSequence(i) {
